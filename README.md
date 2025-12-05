@@ -2,7 +2,19 @@
 
 A sample implementation for ActivityKit Remote notification server to control Live Activities with push notifications remotely.
 
-For more details, please refer to my blog [SwiftUI / LiveActivity: REMOTE Control With Push Notifications]()
+Specifically, this repository includes the following impelmentations
+- Send push notifications for starting, updating, ending live activities on a single target(device)
+- Start live activities that supports push updates on a channel
+- send boradcast push notifications for updating, ending live activities on a channel
+- Manage channels: create, get, list, delete
+
+
+For more details, please refer to my blog
+- [SwiftUI/LiveActivity: REMOTE Control With Push Notifications]()
+- [SwiftUI/Live Activity: BroadCast Push Notifications]()
+- [APN Server for Controlling Apple Live Activity]()
+- [Server(Typescript) for APNS Broadcasting]()
+
 
 ## Set Up
 
@@ -10,7 +22,7 @@ For more details, please refer to my blog [SwiftUI / LiveActivity: REMOTE Contro
 2. Replace `APN_PRIVATE_KEY.p8` with your p8 key file above.
 3. Obtain the TEAM_ID
 4. Obtain the BUNDLE_ID for the app to send notification to.
-5. Set up the constants in [notifications.ts](./src/notifications.ts)
+5. Create an `.env` from `.env.pulic` and set up the corresponding environment variables.
 
 
 ## Testing
@@ -21,9 +33,15 @@ For more details, please refer to my blog [SwiftUI / LiveActivity: REMOTE Contro
 4. Get the activity push token from the App
 5. Call `updateActivity` or `endActivity` to update or end the activity
 
-I have added a testing function in [notifications.ts](./src/notifications.ts) that you can just run with `npm run dev`.
+I have added a testing function in [index.ts](./src/index.ts) that you can just run with `npm run dev`.
 
-![](./demo.gif)
+## Demo
+
+### Single Device
+![](./single.gif)
+
+### Braodcast
+
 
 
 ## References
@@ -31,3 +49,5 @@ I have added a testing function in [notifications.ts](./src/notifications.ts) th
 - Establishing a token-based connection to APNs: https://developer.apple.com/documentation/UserNotifications/establishing-a-token-based-connection-to-apns
 - Generating a remote notification: https://developer.apple.com/documentation/UserNotifications/generating-a-remote-notification
 - Starting and updating Live Activities with ActivityKit push notifications: https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications
+- Sending channel management requests to APNs: https://developer.apple.com/documentation/usernotifications/sending-channel-management-requests-to-apns
+- Sending broadcast push notification requests to APNs: https://developer.apple.com/documentation/usernotifications/sending-broadcast-push-notification-requests-to-apns
