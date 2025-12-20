@@ -10,9 +10,9 @@ Specifically, this repository includes the following impelmentations
 
 
 For more details, please refer to my blog
-- [SwiftUI/LiveActivity: REMOTE Control With Push Notifications]()
+- [SwiftUI/LiveActivity: REMOTE Control With Push Notifications](https://medium.com/@itsuki.enjoy/swiftui-liveactivity-remote-control-with-push-notifications-005d4a6b7005)
 - [SwiftUI/Live Activity: BroadCast Push Notifications]()
-- [APN Server for Controlling Apple Live Activity]()
+- [APN Server for Controlling Apple Live Activity](https://medium.com/@itsuki.enjoy/apn-server-for-controlling-apple-live-activity-typescript-5c1a70829b04)
 - [Server(Typescript) for APNS Broadcasting]()
 
 
